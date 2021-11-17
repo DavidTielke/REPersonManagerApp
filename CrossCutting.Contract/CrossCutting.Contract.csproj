@@ -5,9 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DataClasses\" />
-    <Folder Include="Exceptions\" />
+    <Compile Update="IConfigurator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Callbacks\" />
+    <Folder Include="Exceptions\" />
   </ItemGroup>
 
 </Project>

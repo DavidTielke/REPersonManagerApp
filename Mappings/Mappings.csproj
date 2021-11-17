@@ -9,8 +9,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LogicData.Contract\LogicData.Contract.csproj" />
-    <ProjectReference Include="..\LogicData\LogicData.csproj" />
+    <ProjectReference Include="..\CrossCutting.Contract\CrossCutting.Contract.csproj" />
+    <ProjectReference Include="..\CrossCutting\CrossCutting.csproj" />
+    <ProjectReference Include="..\DataAccess.Contract\DataAccess.Contract.csproj" />
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+    <ProjectReference Include="..\Logic.Contract\Logic.Contract.csproj" />
+    <ProjectReference Include="..\Logic\Logic.csproj" />
   </ItemGroup>
 
 </Project>

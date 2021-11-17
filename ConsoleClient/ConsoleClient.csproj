@@ -10,7 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LogicData.Contract\LogicData.Contract.csproj" />
     <ProjectReference Include="..\Mappings\Mappings.csproj" />
   </ItemGroup>
 

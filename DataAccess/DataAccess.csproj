@@ -7,7 +7,6 @@
   <ItemGroup>
     <ProjectReference Include="..\CrossCutting.Contract\CrossCutting.Contract.csproj" />
     <ProjectReference Include="..\DataAccess.Contract\DataAccess.Contract.csproj" />
-    <ProjectReference Include="..\Logic.Contract\Logic.Contract.csproj" />
   </ItemGroup>
 
 </Project>
