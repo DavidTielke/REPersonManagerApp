@@ -1,17 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Ninject" Version="4.0.0-beta-0134" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\LogicData.Contract\LogicData.Contract.csproj" />
-    <ProjectReference Include="..\Mappings\Mappings.csproj" />
   </ItemGroup>
 
 </Project>

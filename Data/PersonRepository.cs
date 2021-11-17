@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace ConsoleClient.Data
 {
-    class PersonRepository : IPersonRepository
+    public class PersonRepository : IPersonRepository
     {
         public IQueryable<Person> Query => new List<Person>()
         {

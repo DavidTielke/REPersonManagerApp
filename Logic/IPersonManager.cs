@@ -2,7 +2,7 @@
 
 namespace ConsoleClient.Logic
 {
-    internal interface IPersonManager
+    public interface IPersonManager
     {
         IQueryable<Person> GetAllAdults();
         IQueryable<Person> GetAllChildren();

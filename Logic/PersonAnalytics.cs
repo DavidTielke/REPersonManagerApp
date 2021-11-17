@@ -2,7 +2,7 @@
 
 namespace ConsoleClient.Logic
 {
-    class PersonAnalytics : IPersonAnalytics
+    public class PersonAnalytics : IPersonAnalytics
     {
         private readonly IPersonManager _manager;
 

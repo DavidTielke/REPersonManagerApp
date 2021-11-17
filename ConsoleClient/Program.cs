@@ -3,6 +3,7 @@ using System.Linq;
 using ConsoleClient.CrossCutting;
 using ConsoleClient.Data;
 using ConsoleClient.Logic;
+using Mappings;
 using Ninject;
 
 namespace ConsoleClient
@@ -12,11 +13,7 @@ namespace ConsoleClient
         static void Main(string[] args)
         {
             var kernel = new StandardKernel();
-
-            kernel.Bind<IPersonAnalytics>().To<PersonAnalytics>();
-            kernel.Bind<IPersonManager>().To<PersonManager>();
-            kernel.Bind<IPersonRepository>().To<PersonRepository>();
-            kernel.Bind<IConfigurator>().To<Configurator>().InSingletonScope();
+            new KernelInitializer().Initialize(kernel);
 
             var config = kernel.Get<IConfigurator>();
             config.Set("PersonManagement","AgeTreshold", 8);

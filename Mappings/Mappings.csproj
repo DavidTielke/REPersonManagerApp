@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
@@ -11,7 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LogicData.Contract\LogicData.Contract.csproj" />
-    <ProjectReference Include="..\Mappings\Mappings.csproj" />
+    <ProjectReference Include="..\LogicData\LogicData.csproj" />
   </ItemGroup>
 
 </Project>

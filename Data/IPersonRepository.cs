@@ -2,7 +2,7 @@
 
 namespace ConsoleClient.Data
 {
-    internal interface IPersonRepository
+    public interface IPersonRepository
     {
         IQueryable<Person> Query { get; }
     }

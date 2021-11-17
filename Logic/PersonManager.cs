@@ -4,7 +4,7 @@ using ConsoleClient.Data;
 
 namespace ConsoleClient.Logic
 {
-    class PersonManager : IPersonManager
+    public class PersonManager : IPersonManager
     {
         private const string CATEGORY = "PersonManagement";
         private const string AGETRESHOLD = "AgeTreshold";
