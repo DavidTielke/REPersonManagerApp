@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using ConsoleClient.CrossCutting;
 using ConsoleClient.Data;
 using ConsoleClient.Logic;
 using Ninject;
@@ -15,6 +16,10 @@ namespace ConsoleClient
             kernel.Bind<IPersonAnalytics>().To<PersonAnalytics>();
             kernel.Bind<IPersonManager>().To<PersonManager>();
             kernel.Bind<IPersonRepository>().To<PersonRepository>();
+            kernel.Bind<IConfigurator>().To<Configurator>().InSingletonScope();
+
+            var config = kernel.Get<IConfigurator>();
+            config.Set("PersonManagement","AgeTreshold", 8);
 
             var manager = kernel.Get<IPersonManager>();
             var analytics = kernel.Get<IPersonAnalytics>();
