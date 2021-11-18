@@ -20,6 +20,10 @@ namespace ConsoleClient
 
             var manager = kernel.Get<IPersonManager>();
             var analytics = kernel.Get<IPersonAnalytics>();
+            var workflow = kernel.Get<INewPersonWorkflow>();
+
+            var newPerson = new Person(7, "Lisa", 2);
+            workflow.Run(newPerson);
 
             var adults = manager.GetAllAdults();
             var amountAdults = analytics.GetAmountAdults();
@@ -27,10 +31,10 @@ namespace ConsoleClient
             var amountChildren = analytics.GetAmountChildren();
 
             Console.WriteLine($"## Erwachsene ({amountAdults}) ##");
-            adults.ToList().ForEach(a => Console.WriteLine(a.Name));
+            adults.ToList().ForEach(a => Console.WriteLine($"{a.Name} - Katze: {a.Cat?.Name ?? "keine"}"));
 
             Console.WriteLine($"## Kinder ({amountChildren}) ##");
-            children.ToList().ForEach(c => Console.WriteLine(c.Name));
+            children.ToList().ForEach(c => Console.WriteLine($"{c.Name} - Katze: {c.Cat?.Name ?? "keine"}"));
         }
     }
 }

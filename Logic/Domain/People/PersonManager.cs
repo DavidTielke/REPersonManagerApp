@@ -21,12 +21,17 @@ namespace ConsoleClient.Logic
 
         public IQueryable<Person> GetAllAdults()
         {
-            return _repository.Query.Where(p => p.Age >= 18);
+            return _repository.Query.Where(p => p.Age >= AgeTreshold);
         }
 
         public IQueryable<Person> GetAllChildren()
         {
-            return _repository.Query.Where(p => p.Age < 18);
+            return _repository.Query.Where(p => p.Age < AgeTreshold);
+        }
+
+        public void Add(Person person)
+        {
+            _repository.Add(person);
         }
     }
 }

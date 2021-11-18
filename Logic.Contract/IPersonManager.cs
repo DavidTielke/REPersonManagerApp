@@ -6,5 +6,6 @@ namespace ConsoleClient.Logic
     {
         IQueryable<Person> GetAllAdults();
         IQueryable<Person> GetAllChildren();
+        void Add(Person person);
     }
 }
